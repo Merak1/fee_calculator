@@ -1,0 +1,39 @@
+[
+  {
+    "order_item_type": "Example type with Per-Page Fee",
+    "fees": [
+      {
+        "name": "Example Flat Fee",
+        "amount": "5.00",
+        "type": "flat"
+      },
+      {
+        "name": "Example Per-Page Fee",
+        "amount": "1.00",
+        "type": "per-page"
+      }
+    ],
+    "distributions": [
+      {
+        "name": "Printing Fund",
+        "amount": "5.00"
+      }
+    ]
+  },
+  {
+    "order_item_type": "Example type with Flat Fee",
+    "fees": [
+      {
+        "name": "Example Flat Fee",
+        "amount": "10.00",
+        "type": "flat"
+      }
+    ],
+    "distributions": [
+      {
+        "name": "Printing Fund",
+        "amount": "10.00"
+      }
+    ]
+  }
+]
