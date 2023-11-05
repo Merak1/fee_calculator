@@ -13,17 +13,14 @@ const orders_example = await  readFile("orders_example.json", "utf-8");
 // const orders_example = await  readFile("orders_2.json", "utf-8");
 const eventEmitter = new EventEmitter()
 
-
 const feesObject = JSON.parse(fees_example)
 const ordersObject = JSON.parse(orders_example)
-
 
 eventEmitter.on('start', () => {
     let orders_string = ''
     ordersObject.forEach(order => {
         orders_string += getOrderFees(order)
     });
-    
     log(chalk.white(orders_string));
 })
 
@@ -41,7 +38,6 @@ function getOrderFees(order) {
 Order ID: ${order_number}
 `;
     stringBase += orderItemsString += totalString
-
     return stringBase;
 }
 
@@ -81,8 +77,6 @@ function feeByOrderItemType(type,pages) {
                         let firstPageFee = amountByFeeType(FLAT,fees ) 
                         total = pages * parseInt(firstPageFee)          
                     }
-
-
                 }
             }
         });
@@ -97,6 +91,5 @@ function amountByFeeType (type,fees) {
         }
     } 
 }
-
 
 eventEmitter.emit('start');
